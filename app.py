@@ -119,7 +119,7 @@ def get_image_from_url(url):
         return None
 
 def main():
-    st.title("AI-Powered Study Planner")
+    st.title("StudyAssistAI")
 
     # User input
     num_subjects = st.number_input("Number of subjects", min_value=1, max_value=10, value=3)
@@ -138,7 +138,7 @@ def main():
             exam_date = st.date_input(f"Exam date for {subject}", key=f"exam_date_{i}")
             exam_dates.append(exam_date)
 
-    if st.button("Generate Study Schedule"):
+    if st.button("Find Study Resources"):
         if all(subjects) and all(exam_date > datetime.now().date() for exam_date in exam_dates):
             with st.spinner("Generating study schedule..."):
                 schedule = generate_study_schedule(subjects, levels, exam_dates)
