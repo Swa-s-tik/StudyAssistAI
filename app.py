@@ -14,7 +14,7 @@ from io import BytesIO
 from streamlit_card import card
 
 # Set up Gemini API
-os.environ['GOOGLE_API_KEY'] = 'AIzaSyD5SNn_C2wv1mwdjXxOz09IiJg6yiIeQig'
+os.environ['GOOGLE_API_KEY'] = 'AIzaSyAGho3ZFXiX_gguR5GhhtztKTgr0iHLqlg'
 genai.configure(api_key=os.environ['GOOGLE_API_KEY'])
 
 # # Set up Google Calendar API
